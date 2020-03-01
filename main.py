@@ -30,10 +30,13 @@ def extract_phonenumbers(path="./phones"):
                     with open(numbers_file_path) as f:
                         numbers.extend([parse_number(line.rstrip('\n')) for line in f])
     normalized_numbers = list(set(numbers))
+    normalized_numbers.sort()
+
     if normalized_numbers[0] == "":
         normalized_numbers.pop(0)
-    normalized_numbers.sort()
+    
     return format_numbers(normalized_numbers)
 
-print('Formatted phone numbers:')
-print("\n".join(extract_phonenumbers()))
+if __name__ == "__main__":
+    print('Formatted phone numbers:')
+    print("\n".join(extract_phonenumbers()))
