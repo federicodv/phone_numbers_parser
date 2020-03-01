@@ -46,19 +46,47 @@
 1. Docker
 2. Docker-compose (optional)
 
-## How to use it:
+## Quickstart:
 Create or edit a .txt file inside the **"phones"** folder.   
 Add one phone per line into the created/edited file.
 
-### Using docker:
+### Run code using docker:
 Run:  
 
     docker build --rm -f "Dockerfile" -t phones_formatter:latest "."
     docker run phones_formatter:latest
 
-### Using docker-compose:
+### Run code using docker:
 Run:  
 
-    docker-compose up
+    docker-compose up --build
 
-Check the output.
+### Check your output:  
+**With docker:** 
+
+    Formatted phone numbers:
+    +7 (095) 200-1230
+    +7 (495) 200-1231
+    +7 (812) 122-1345
+    +7 (812) 123-4567
+    +7 (812) 200-1230
+    +7 (812) 200-1232
+    +7 (812) 200-1235
+    +7 (812) 200-1239
+
+**With docker-compose:** 
+
+    Successfully built XXXXXXXXXXXXXX
+    Successfully tagged phones_phones:latest
+    Recreating phones_formatter ... done
+    Attaching to phones_formatter
+    phones_formatter | Formatted phone numbers:
+    phones_formatter | +7 (095) 200-1230
+    phones_formatter | +7 (495) 200-1231
+    phones_formatter | +7 (812) 122-1345
+    phones_formatter | +7 (812) 123-4567
+    phones_formatter | +7 (812) 200-1230
+    phones_formatter | +7 (812) 200-1232
+    phones_formatter | +7 (812) 200-1235
+    phones_formatter | +7 (812) 200-1239
+    phones_formatter exited with code 0
