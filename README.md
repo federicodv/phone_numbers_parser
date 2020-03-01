@@ -56,7 +56,7 @@ Run:
     docker build --rm -f "Dockerfile" -t phones_formatter:latest "."
     docker run phones_formatter:latest
 
-### Run code using docker:
+### Run code using docker-compose:
 Run:  
 
     docker-compose up --build
