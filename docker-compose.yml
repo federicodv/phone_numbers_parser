@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  phones:
+    container_name: phones_formatter
+    build: ./  
+    volumes:
+      - .:/app/
+   

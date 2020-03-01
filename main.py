@@ -35,5 +35,5 @@ def extract_phonenumbers(path="./phones"):
     normalized_numbers.sort()
     return format_numbers(normalized_numbers)
 
-print('Formatting numbers ...')
-print(extract_phonenumbers())
+print('Formatted phone numbers:')
+print("\n".join(extract_phonenumbers()))

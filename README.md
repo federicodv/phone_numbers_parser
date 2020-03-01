@@ -41,3 +41,24 @@
     +7 (812)-1234567 is valid
 3. Area codes have 3 digits
 4. Country code have 1 digit
+
+## Reqs
+1. Docker
+2. Docker-compose (optional)
+
+## How to use it:
+Create or edit a .txt file inside the **"phones"** folder.   
+Add one phone per line into the created/edited file.
+
+### Using docker:
+Run:  
+
+    docker build --rm -f "Dockerfile" -t phones_formatter:latest "."
+    docker run phones_formatter:latest
+
+### Using docker-compose:
+Run:  
+
+    docker-compose up
+
+Check the output.
